@@ -21,9 +21,9 @@ public class Graphique extends JFrame{
     JLabel login = new JLabel("LOGIN");
     JTextField txuser = new JTextField(15);
 
-    JLabel password = new JLabel("Password");
+    JLabel password = new JLabel("Password"); 
     JTextField txuser2 = new JTextField(15);
-    
+    JButton bite = new JButton();    
     JButton connecte = new JButton ("Connection");
     pan1.add(login);
     pan1.add(txuser);
