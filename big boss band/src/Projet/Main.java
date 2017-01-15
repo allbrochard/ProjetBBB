@@ -7,26 +7,8 @@ import javax.swing.JTextField;
 public class Main {
 
 	public static void main(String[] args) {
-
-		JFrame login = new JFrame(){
-
-			public void Login(){
-
-				setSize(300,150);
-				setDefaultCloseOperation(EXIT_ON_CLOSE);
-				JPanel pan1= new JPanel();
-				JButton bouton = new JButton(" LOGIN");
-				JTextField txuser = new JTextField(15);
-
-				pan1.add(bouton);
-				pan1.add(txuser);
-				this.setContentPane(pan1);
-				
-				pan1.setVisible(true);
-				System.out.println("salut");
-				
-			}
+		
+		Graphique JFrame = new Graphique();
+			
 		};
 	}
-
-}
