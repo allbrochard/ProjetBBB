@@ -23,7 +23,7 @@ public class Graphique extends JFrame{
 
     JLabel password = new JLabel("Password"); 
     JTextField txuser2 = new JTextField(15);
-    JButton bite = new JButton("ukljfg");    
+    JButton bite = new JButton("ukfg");    
     JButton connecte = new JButton ("Connection");
     pan1.add(login);
     pan1.add(txuser);
