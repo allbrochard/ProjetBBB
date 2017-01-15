@@ -8,8 +8,24 @@ public class Admin extends Compte {
 		
 	}
 
-	public void creeCompte(){
+	public void creeEtudiant(){
 
 	}
+	public void creeResponsable(){
+		
+	}
+	public void creeFormateur(){
+		
+	}
+	public void modifEtudiant(){
 
+	}
+	public void modifResponsable(){
+		
+	}
+	public void modifFormateur(){
+		
+	}
+	
 }
+
