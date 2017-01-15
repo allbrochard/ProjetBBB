@@ -1,10 +1,7 @@
 package Projet;
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JTextField;
-
-import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -12,13 +9,15 @@ public class Graphique extends JFrame{
 
 	public Graphique (){
 
-		setSize(300,150);
+		setSize(250,150);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setResizable(false);
+		setLocationRelativeTo(null);
 		JPanel pan1= new JPanel();
-		JButton login = new JButton("LOGIN");
+		JLabel login = new JLabel("LOGIN");
 		JTextField txuser = new JTextField(15);
 	
-		JButton password = new JButton("Password");
+		JLabel password = new JLabel("Password");
 		JTextField txuser2 = new JTextField(15);
 		
 		JButton connecte = new JButton ("Connection");
