@@ -26,6 +26,8 @@ public class Admin extends Compte {
 	public void modifFormateur(){
 		
 	}
-	
+	public void supprComtpe(){
+		
+	}
 }
 
