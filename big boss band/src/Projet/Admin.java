@@ -7,6 +7,8 @@ public class Admin extends Compte {
 	String nom;
 	String prenom;
 	int age;
-
+public void creeCompte(){
+	
+}
 	
 }

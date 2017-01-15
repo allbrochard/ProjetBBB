@@ -1,5 +1,7 @@
 package Projet;
 
-public class PlanningPerso {
-
+public abstract class PlanningPerso {
+public void ckeckPlan(){
+	
+}
 }

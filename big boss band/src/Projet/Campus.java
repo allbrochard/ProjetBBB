@@ -1,5 +1,5 @@
 package Projet;
 
-public class Campus {
+public abstract class Campus {
 
 }

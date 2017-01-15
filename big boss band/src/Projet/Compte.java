@@ -1,5 +1,7 @@
 package Projet;
 
-public class Compte {
-
+public abstract class Compte {
+public void checkPlanGen(){
+	
+}
 }

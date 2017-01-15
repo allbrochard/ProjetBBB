@@ -1,5 +1,5 @@
 package Projet;
 
-public class Matiere {
-
+public abstract class Matiere {
+String nomMat;
 }
