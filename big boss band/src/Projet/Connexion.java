@@ -11,15 +11,15 @@ import java.sql.Statement;
 
 public class Connexion {
 	
-	private String url = "";
+	private String url = "jdbc:postgresql://localhost:5432/projetBBB";
 
 	//Nom du user
 
-	private String user = "";
+	private String user = "postgres";
 
 	//Mot de passe de l'utilisateur
 
-	private String passwd = "";
+	private String passwd = "z45rik8521";
 
 	//Objet Connection
 
