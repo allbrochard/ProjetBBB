@@ -58,6 +58,7 @@ public class Admin extends Compte {
 
 		System.out.print("Rentrez le login du compte à modifier : ");
 		login = sc.nextLine();	
+		
 	}
 
 	public void supprCompte(){
