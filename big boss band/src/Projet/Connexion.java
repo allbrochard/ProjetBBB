@@ -20,13 +20,16 @@ public class Connexion {
 
 	//Mot de passe de l'utilisateur
 
+
 	private String passwd;
+
 	//Objet Connection
 
 	private static Connection connect;
 
 	//Constructeur privé.
 
+	
 	public Connexion(){
 		Scanner sc = new Scanner(System.in);
 		boolean testCo = false;
