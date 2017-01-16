@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path=""/>
-	<classpathentry kind="lib" path="E:/Downloads/Zone-Téléchargement/Witcher 3/postgresql-9.4.1212.jre6.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_112"/>
+	<classpathentry kind="lib" path="C:/Users/allan/workspace/big boss band/lib/postgresql-9.4.1212.jre6 (1).jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre1.8.0_111"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
