@@ -13,7 +13,7 @@ import javax.swing.JTextField;
 public class Graphique extends JFrame{
 	
 	String mp, log;
-	JTextField txuser = new JTextField(15);
+	JTextField txuser;
 	JTextField txuser2 = new JTextField(15);  
 	JPanel pan1= new JPanel();
 	JPanel pan2 = new JPanel();
@@ -22,7 +22,13 @@ public class Graphique extends JFrame{
 	JButton connecte = new JButton ("Connection");
 	
 	public Graphique (){
-
+		txuser = new JTextField(15);
+		
+		txuser2 = new JTextField(15); 
+		
+		login = new JLabel("LOGIN");
+		
+		password = new JLabel("Password");
 		
 		
 		setSize(250,150);
@@ -35,16 +41,11 @@ public class Graphique extends JFrame{
 		pan1.add(password);
 		pan1.add(txuser2);
 		pan1.add(connecte);
-		
-
-		
+	
 		this.setContentPane(pan1);
 		pan1.setVisible(true);
 		this.setVisible(true); 
 		
-		
-
-
 	}
 	class Connecte implements ActionListener{
 
