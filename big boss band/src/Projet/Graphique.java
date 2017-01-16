@@ -13,7 +13,8 @@ import javax.swing.JTextField;
 public class Graphique extends JFrame{
 
 	String mp, log;
-	JTextField txuser; 
+
+	JTextField txuser = new JTextField(15);
 	JTextField txuser2 = new JTextField(15);  
 	JPanel pan1= new JPanel();
 	JPanel pan2 = new JPanel();
@@ -23,14 +24,6 @@ public class Graphique extends JFrame{
 
 	public Graphique (){
 
-		GridBagConstraints cs = new GridBagConstraints();
-		cs.fill = GridBagConstraints.HORIZONTAL;
-
-		txuser = new JTextField(15);
-		cs.gridx = 0;
-		cs.gridy = 0;
-		cs.gridwidth = 1;
-		pan1.add(txuser, cs);
 
 		setSize(250,150);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -44,17 +37,15 @@ public class Graphique extends JFrame{
 		pan1.add(txuser2);
 		pan1.add(connecte);
 
+
 		this.setContentPane(pan2);
 		pan2.setVisible(true);
-
 
 		this.setContentPane(pan1);
 		pan1.setVisible(true);
 
 		this.setVisible(true); 
-
-
-
+		
 	}
 	class Connecte implements ActionListener{
 
