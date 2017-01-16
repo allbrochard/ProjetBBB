@@ -22,6 +22,7 @@ public class Graphique extends JFrame{
 	JButton connecte = new JButton ("Connection");
 	
 	public Graphique (){
+		
 		txuser = new JTextField(15);
 		
 		txuser2 = new JTextField(15); 
