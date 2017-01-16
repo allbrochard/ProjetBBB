@@ -1,4 +1,4 @@
-package Projet;
+package projet;
 
 public class Main {
 
@@ -10,7 +10,7 @@ public class Main {
 
 		Connexion con = new Connexion();
 		con.getInstance();
-huhik
+
 		
 		//Graphique JFrame = new Graphique();
 		//FenetreEtudiantFormateur JFrame = new FenetreEtudiantFormateur();	

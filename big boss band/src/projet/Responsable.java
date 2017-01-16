@@ -1,4 +1,4 @@
-package Projet;
+package projet;
 
 public class Responsable extends Compte {
 
