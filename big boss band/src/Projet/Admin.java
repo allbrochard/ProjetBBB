@@ -51,9 +51,7 @@ public class Admin extends Compte {
 		return res;
 	
 	}
-	public void creeResponsable(){
-		
-	}
+
 	public void modifCompte(){
 
 	}
