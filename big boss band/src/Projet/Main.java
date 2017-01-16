@@ -5,6 +5,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		//Graphique JFrame = new Graphique();
-		Fenetre JFrame = new Fenetre();	
-		}
+		//FenetreEtudiantFormateur JFrame = new FenetreEtudiantFormateur();	
+		FenetreAdmin JFrame = new FenetreAdmin();
+	}
 	}

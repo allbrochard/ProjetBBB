@@ -8,9 +8,9 @@ import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 
-	public class  Fenetre extends JFrame implements MouseListener{
+	public class  FenetreEtudiantFormateur extends JFrame implements MouseListener{
 		
-		public Fenetre(){
+		public FenetreEtudiantFormateur(){
 			
 			setSize(800, 600);
 			setDefaultCloseOperation(EXIT_ON_CLOSE);
