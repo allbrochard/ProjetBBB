@@ -55,9 +55,7 @@ public class Admin extends Compte {
 	public void modifCompte(){
 
 	}
-	public void modifResponsable(){
-		
-	}
+
 	public void supprCompte(){
 		
 	}
