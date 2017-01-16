@@ -44,9 +44,10 @@ public class FenetreAdmin extends JFrame implements MouseListener{
 		Salle.add(SuppSalle);
 		JMenuItem BurnSalle = new JMenuItem("Bruler Salle");
 		SuppSalle.add(BurnSalle);
-		JMenuItem PaintSalle = new JMenuItem("Repeindre Salle");
-		SuppSalle.add(PaintSalle);
-		
+		JMenuItem DematSalle = new JMenuItem("Dematerialiser Salle");
+		SuppSalle.add(DematSalle);
+		JMenuItem Dim = new JMenuItem("Changer de Dimension");
+		SuppSalle.add(Dim);
 		
 		
 		this.setContentPane(pan1);
