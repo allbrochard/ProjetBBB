@@ -1,6 +1,7 @@
 package Projet;
 
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
 
 import javax.swing.JButton;
@@ -10,17 +11,20 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 
 public class Graphique extends JFrame{
-
+	
+	String mp, log;
+	JTextField txuser = new JTextField(15);
+	JTextField txuser2 = new JTextField(15);  
+	JPanel pan1= new JPanel();
+	JPanel pan2 = new JPanel();
+	JLabel login = new JLabel("LOGIN");
+	JLabel password = new JLabel("Password");
+	JButton connecte = new JButton ("Connection");
+	
 	public Graphique (){
-		JPanel pan1= new JPanel();
-		JPanel pan2 = new JPanel();
-		JLabel login = new JLabel("LOGIN");
-		JLabel password = new JLabel("Password"); 
-		JTextField txuser = new JTextField(15);
-		JTextField txuser2 = new JTextField(15);  
-		JButton connecte = new JButton ("Connection");
-		
 
+		
+		
 		setSize(250,150);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setResizable(false);
@@ -32,14 +36,29 @@ public class Graphique extends JFrame{
 		pan1.add(txuser2);
 		pan1.add(connecte);
 		
+
+		
 		this.setContentPane(pan1);
 		pan1.setVisible(true);
 		this.setVisible(true); 
+		
+		
 
 
 	}
+	class Connecte implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			log = txuser.getText();
+			mp = txuser2.getText();
+			
+		}
+		
+		
+	}
 	public void mouseClicked(MouseEvent arg0) {
-		// TODO Auto-generated method stub
+	
 
 	}
 
