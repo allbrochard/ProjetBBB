@@ -1,4 +1,4 @@
-package Projet;
+package projet;
 
 public class Salle {
 	int idSalle, nombrePlace, nbPc, nbBureau, nbChaise, videoProj, tableau;
