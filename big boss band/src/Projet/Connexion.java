@@ -27,6 +27,7 @@ public class Connexion {
 
 	//Constructeur privé.
 
+	
 	public Connexion(){
 		Scanner sc = new Scanner(System.in);
 		boolean testCo = false;
