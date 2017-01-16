@@ -30,7 +30,7 @@ public class Admin extends Compte {
 			prepare.setString(4, sc.nextLine());
 			System.out.print("Rentrez le type de compte : ");
 			prepare.setString(5, sc.nextLine());
-			System.out.print("Rentrez l'âge : ");
+			System.out.print("Rentrez l'age : ");
 			prepare.setInt(6, sc.nextInt());
 			
 			//On execute la requete
