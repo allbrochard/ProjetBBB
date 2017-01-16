@@ -32,28 +32,11 @@ public class Connexion {
 	
 	public Connexion(){
 		Scanner sc = new Scanner(System.in);
-		boolean testCo = false;
 		url = "jdbc:postgresql://localhost:5432/projetBBB";
 		user = "postgres";
-		
-		do{
-			System.out.println("rentrez votre prenom : ");
-			switch(sc.nextLine()){
-			case "allan":
-				testCo=true;
-				passwd = "vsts2qzr";
-				break;
-			case"françois":
-				testCo=true;
-				passwd = "z45rik8521";
-				break;
-			case"florent":
-				testCo=true;
-				passwd="atexia88";
-				break;
-			default:System.out.println("mauvais prenom");
-			}
-		}while(!testCo);
+		System.out.println("entrez votre mot de pass postgres ");
+		passwd = sc.nextLine();
+
 
 		try {
 
