@@ -26,7 +26,6 @@ public class Graphique extends JFrame{
 	String b="allan";
 	public Graphique (){
 
-		
 		login = new JLabel("LOGIN");
 		
 		password = new JLabel("Password");
@@ -35,6 +34,10 @@ public class Graphique extends JFrame{
 		
 		txuser2 = new JTextField(15); 
 		
+
+		
+		
+
 		setSize(250,150);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setResizable(false);
