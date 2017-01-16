@@ -7,6 +7,7 @@ import java.awt.event.MouseEvent;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -21,7 +22,8 @@ public class Graphique extends JFrame{
 	JLabel login = new JLabel("LOGIN");
 	JLabel password = new JLabel("Password");
 	JButton connecte = new JButton ("Connection");
-
+	String a="allan";
+	String b="allan";
 	public Graphique (){
 
 		login = new JLabel("LOGIN");
@@ -62,9 +64,20 @@ public class Graphique extends JFrame{
 
 
 		public void actionPerformed(ActionEvent e) {
+			boolean connect = false;
 			log = txuser.getText();
 			mp = txuser2.getText();
-
+			if(log.equals(a)){
+				if(mp.equals(b)){
+					JOptionPane.showMessageDialog(pan1, "Connexion O.K.");
+				}
+				else{
+					JOptionPane.showMessageDialog(pan1, "Mot de passe invalide");
+				}
+			}
+			else{
+				JOptionPane.showMessageDialog(pan1, "Login non reconnu");
+			}
 		}
 
 
