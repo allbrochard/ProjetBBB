@@ -3,6 +3,10 @@ import java.awt.GridBagConstraints;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.Scanner;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -24,6 +28,7 @@ public class Graphique extends JFrame{
 	JButton connecte = new JButton ("Connection");
 	String a="allan";
 	String b="allan";
+	String typeCompte;
 	public Graphique (){
 
 		login = new JLabel("LOGIN");
@@ -60,6 +65,34 @@ public class Graphique extends JFrame{
 		this.setVisible(true); 
 		
 	}
+	
+	public String connexionLog(){
+		Scanner sc = new Scanner(System.in);
+		
+		
+		System.out.print("Rentrez le login du compte à supprimer : ");
+		
+		String query = "SELECT typecompte FROM public.compte WHERE logcompte = ? RETURNING typecompte;";
+		try {
+			PreparedStatement prepare = Connexion.getInstance().prepareStatement(query, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+			
+			prepare.setString(1, log);
+			
+			prepare.execute();
+			ResultSet result = prepare.getResultSet();
+			if(result.first())
+			{
+				typeCompte = result.getString(7);
+				
+			}
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+	
 	class Connecte implements ActionListener{
 
 
