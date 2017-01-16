@@ -27,9 +27,16 @@ public class Graphique extends JFrame{
 	public Graphique (){
 
 		login = new JLabel("LOGIN");
+		
 		password = new JLabel("Password");
+		
 		txuser = new JTextField(15);
+		
 		txuser2 = new JTextField(15); 
+		
+
+		
+		
 
 		setSize(250,150);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -51,7 +58,7 @@ public class Graphique extends JFrame{
 		pan1.setVisible(true);
 
 		this.setVisible(true); 
-
+		
 	}
 	class Connecte implements ActionListener{
 
