@@ -22,14 +22,15 @@ public class Graphique extends JFrame{
 	JButton connecte = new JButton ("Connection");
 	
 	public Graphique (){
+		login = new JLabel("LOGIN");
+		
+		password = new JLabel("Password");
 		
 		txuser = new JTextField(15);
 		
 		txuser2 = new JTextField(15); 
 		
-		login = new JLabel("LOGIN");
-		
-		password = new JLabel("Password");
+
 		
 		
 		setSize(250,150);
