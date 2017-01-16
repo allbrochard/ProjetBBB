@@ -8,25 +8,19 @@ public class Admin extends Compte {
 		System.out.println("hlp");
 	}
 
-	public void creeEtudiant(){
+	public void creeCompte(){
 
 	}
 	public void creeResponsable(){
 		
 	}
-	public void creeFormateur(){
-		
-	}
-	public void modifEtudiant(){
+	public void modifCompte(){
 
 	}
 	public void modifResponsable(){
 		
 	}
-	public void modifFormateur(){
-		
-	}
-	public void supprComtpe(){
+	public void supprCompte(){
 		
 	}
 }
