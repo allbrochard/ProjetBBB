@@ -9,7 +9,6 @@ public class Admin extends Compte {
 	
 
 	public Admin() {
-		System.out.println("hlp");
 	}
 
 	public boolean creeCompte(){
