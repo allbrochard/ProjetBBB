@@ -2,22 +2,24 @@ package Projet;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.MouseEvent;
+
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenuBar;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
-import javax.swing.SwingConstants;
 
 public class Graphique extends JFrame{
 
 	public Graphique (){
+		
 		JPanel pan1= new JPanel();
 		JLabel login = new JLabel("LOGIN");
 		JTextField txuser = new JTextField(15);
 		JLabel password = new JLabel("Password"); 
 		JTextField txuser2 = new JTextField(15);  
+	
 		JButton connecte = new JButton ("Connection");
 		
 		JPanel pan2 = new JPanel();
@@ -28,6 +30,9 @@ public class Graphique extends JFrame{
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setResizable(false);
 		setLocationRelativeTo(null);
+
+
+		
 
 		pan1.add(login);
 		pan1.add(txuser);	
@@ -40,7 +45,6 @@ public class Graphique extends JFrame{
 		this.setContentPane(pan1);
 		pan1.setVisible(true);
 		this.setVisible(true);
-
 
 	}
 	public void mouseClicked(MouseEvent arg0) {
