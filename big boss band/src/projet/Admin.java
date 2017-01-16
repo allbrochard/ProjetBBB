@@ -50,6 +50,7 @@ public class Admin extends Compte {
 		
 		return res;
 	
+		
 	}
 
 	public void modifCompte(){
