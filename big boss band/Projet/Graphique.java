@@ -30,6 +30,7 @@ public class Graphique extends JFrame{
 	String typeCompte;
 	String mdpCompte;
 	String loginCompte;
+	
 	public Graphique (){
 
 		login = new JLabel("LOGIN");
@@ -56,7 +57,7 @@ public class Graphique extends JFrame{
 		pan1.add(txuser2);
 		pan1.add(connecte);
 		connecte.addActionListener(new ActionListener() {
-
+			//connection avec boite de dialogue pour indiquer ce qui ce passe;
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
 				boolean connect = false;
