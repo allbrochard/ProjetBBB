@@ -1,4 +1,4 @@
-package projet;
+package Projet;
 
 import java.awt.BorderLayout;
 import java.awt.event.MouseEvent;

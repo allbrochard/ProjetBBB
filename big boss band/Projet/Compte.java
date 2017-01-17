@@ -1,4 +1,4 @@
-package projet;
+package Projet;
 
 public abstract class Compte {
 	String login, mp,nom,prenom;

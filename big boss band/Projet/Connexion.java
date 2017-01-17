@@ -1,4 +1,4 @@
-package projet;
+package Projet;
 
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
