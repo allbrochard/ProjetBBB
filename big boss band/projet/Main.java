@@ -5,9 +5,7 @@ public class Main {
 	public static void main(String[] args) {
 
 
-		Admin adm = new Admin("admin", "admin", "Fett", "Tarti", 26);
-
-
+		Admin adm = new Admin();
 		Connexion con = new Connexion();
 		con.getInstance();
 
@@ -19,7 +17,7 @@ public class Main {
 
 	
 
-	adm.creeCompte();
+		adm.creeCompte();
 		
 	}
 }

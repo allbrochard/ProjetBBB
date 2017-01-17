@@ -8,9 +8,8 @@ import java.util.Scanner;
 public class Admin extends Compte {
 	
 
-	public Admin(String login, String mp, String nom, String prenom, int age) {
-		super(login, mp, nom, prenom, age);
-		System.out.println("hlp");
+
+	public Admin() {
 	}
 
 	public boolean creeCompte(){
@@ -30,7 +29,7 @@ public class Admin extends Compte {
 			prepare.setString(4, sc.nextLine());
 			System.out.print("Rentrez le type de compte : ");
 			prepare.setString(5, sc.nextLine());
-			System.out.print("Rentrez l'âge : ");
+			System.out.print("Rentrez l'age : ");
 			prepare.setInt(6, sc.nextInt());
 			
 			//On execute la requete
@@ -50,14 +49,31 @@ public class Admin extends Compte {
 		
 		return res;
 	
+		
 	}
 
 	public void modifCompte(){
-
+		
 	}
+		
 
 	public void supprCompte(){
+		Scanner sc = new Scanner(System.in);
+		boolean res = false;
 		
+		System.out.print("Rentrez le login du compte à supprimer : ");
+		
+		String query = "DELETE FROM public.compte WHERE logcompte = ?;";
+		try {
+			PreparedStatement prepare = Connexion.getInstance().prepareStatement(query, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+			
+			prepare.setString(1, sc.nextLine());
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		System.out.println("Le compte a bien été supprimé");
 	}
 }
 
