@@ -1,10 +1,15 @@
 package projet;
 
 import java.awt.BorderLayout;
+<<<<<<< HEAD
 import java.awt.Button;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
+=======
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
+>>>>>>> branch 'master' of https://github.com/allbrochard/ProjetBBB.git
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JMenu;

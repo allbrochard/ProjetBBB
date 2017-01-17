@@ -32,6 +32,7 @@ public class Connexion {
 	
 	public Connexion(){
 		Scanner sc = new Scanner(System.in);
+<<<<<<< HEAD
 		boolean testCo = false;
 		url = "jdbc:postgresql://localhost:5432/projetBBB";
 		user = "postgres";
@@ -54,6 +55,13 @@ public class Connexion {
 			default:System.out.println("mauvais prenom");
 			}
 		}while(!testCo);
+=======
+		url = "jdbc:postgresql://localhost:5432/projetBBB";
+		user = "postgres";
+		System.out.println("entrez votre mot de pass postgres ");
+		passwd = sc.nextLine();
+
+>>>>>>> branch 'master' of https://github.com/allbrochard/ProjetBBB.git
 
 		try {
 
