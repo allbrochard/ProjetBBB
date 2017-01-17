@@ -8,7 +8,7 @@ public class Main {
 
 
 		Connexion con = new Connexion();
-		con.getInstance();
+		
 
 		
 		//Graphique JFrame = new Graphique();
@@ -16,7 +16,7 @@ public class Main {
 		//FenetreAdmin JFrame = new FenetreAdmin();
 		//FenetreResponsable respon = new FenetreResponsable();
 		
-		adm.creeCompte();
+		adm.supprCompte();
 		
 	}
 }

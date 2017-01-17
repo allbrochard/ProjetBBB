@@ -61,13 +61,14 @@ public class Admin extends Compte {
 		Scanner sc = new Scanner(System.in);
 		boolean res = false;
 		
-		System.out.print("Rentrez le login du compte à supprimer : ");
-		
 		String query = "DELETE FROM public.compte WHERE logcompte = ?;";
 		try {
 			PreparedStatement prepare = Connexion.getInstance().prepareStatement(query, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
 			
+			System.out.print("Rentrez le login du compte à supprimer : ");
 			prepare.setString(1, sc.nextLine());
+			
+			prepare.execute();
 		}
 		catch (SQLException e) {
 			e.printStackTrace();
