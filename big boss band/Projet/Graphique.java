@@ -28,19 +28,21 @@ public class Graphique extends JFrame{
 	String a="allan";
 	String b="allan";
 	String typeCompte;
+	String mdpCompte;
+	String loginCompte;
 	public Graphique (){
 
 		login = new JLabel("LOGIN");
-		
-		password = new JLabel("Password");
-		
-		txuser = new JTextField(15);
-		
-		txuser2 = new JTextField(15); 
-		
 
-		
-		
+		password = new JLabel("Password");
+
+		txuser = new JTextField(15);
+
+		txuser2 = new JTextField(15); 
+
+
+
+
 
 		setSize(250,150);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -53,7 +55,28 @@ public class Graphique extends JFrame{
 		pan1.add(password);
 		pan1.add(txuser2);
 		pan1.add(connecte);
+		connecte.addActionListener(new ActionListener() {
 
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				boolean connect = false;
+				log = txuser.getText();
+				
+				mp = txuser2.getText();
+				
+				if(log.equals(testLogin())){
+					if(mp.equals(recupeMP())){
+						JOptionPane.showMessageDialog(pan1, "Connexion O.K.");
+					}
+					else{
+						JOptionPane.showMessageDialog(pan1, "Mot de passe invalide");
+					}
+				}
+				else{
+					JOptionPane.showMessageDialog(pan1, "Login non reconnu");
+				}
+			}
+		});
 
 		this.setContentPane(pan2);
 		pan2.setVisible(true);
@@ -62,58 +85,89 @@ public class Graphique extends JFrame{
 		pan1.setVisible(true);
 
 		this.setVisible(true); 
-		
+
 	}
-	
+	/**
+	 * 
+	 * @return le type de compte pour le réutiliser;
+	 */
 	public String connexionLog(){
 		Scanner sc = new Scanner(System.in);
-		
-		
-		System.out.print("Rentrez le login du compte à supprimer : ");
-		
+
+
+		System.out.print("Rentrez le login  ");
+
 		String query = "SELECT typecompte FROM public.compte WHERE logcompte = ? RETURNING typecompte;";
 		try {
 			PreparedStatement prepare = Connexion.getInstance().prepareStatement(query, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
-			
+
 			prepare.setString(1, log);
-			
+
 			prepare.execute();
 			ResultSet result = prepare.getResultSet();
 			if(result.first())
 			{
 				typeCompte = result.getString(7);
-				
+
 			}
 		}
 		catch (SQLException e) {
 			e.printStackTrace();
 		}
-		
-		return null;
+
+		return typeCompte;
 	}
+	/**
+	 * 
+	 * @return le mot de passe pour le tester avec le mdp;
+	 */
+	public String recupeMP(){
 
-	class Connecte implements ActionListener{
+		String query = "SELECT pswdcompte FROM public.compte WHERE logcompte = ? RETURNING pswdcompte;";
+		try {
+			PreparedStatement prepare = Connexion.getInstance().prepareStatement(query, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
 
+			prepare.setString(1, log);
 
-		public void actionPerformed(ActionEvent e) {
-			boolean connect = false;
-			log = txuser.getText();
-			mp = txuser2.getText();
-			if(log.equals(a)){
-				if(mp.equals(b)){
-					JOptionPane.showMessageDialog(pan1, "Connexion O.K.");
-				}
-				else{
-					JOptionPane.showMessageDialog(pan1, "Mot de passe invalide");
-				}
-			}
-			else{
-				JOptionPane.showMessageDialog(pan1, "Login non reconnu");
+			prepare.execute();
+			ResultSet result = prepare.getResultSet();
+			if(result.first())
+			{
+				mdpCompte = result.getString(5);
+
 			}
 		}
-
-
+		catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return mdpCompte;
 	}
+	/**
+	 * 
+	 * @return le login, si il n'existe pas return null;
+	 */
+	public String testLogin(){
+		String query = "SELECT logcompte FROM public.compte WHERE logcompte = ? RETURNING logcompte;";
+		try {
+			PreparedStatement prepare = Connexion.getInstance().prepareStatement(query, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+
+			prepare.setString(1, log);
+
+			prepare.execute();
+			ResultSet result = prepare.getResultSet();
+			if(result.first())
+			{
+				loginCompte = result.getString(3);
+				
+			}
+		}
+		catch (SQLException e) {
+			e.printStackTrace();
+			return null;
+		}
+		return mdpCompte;
+	}
+
 	public void mouseClicked(MouseEvent arg0) {
 
 
