@@ -3,13 +3,14 @@ package projet;
 import java.awt.BorderLayout;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+
+//github.com/allbrochard/ProjetBBB.git
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
-import javax.swing.border.Border;
 
 public class FenetreResponsable extends JFrame implements MouseListener{
 

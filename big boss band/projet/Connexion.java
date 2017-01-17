@@ -35,8 +35,9 @@ public class Connexion {
 
 		url = "jdbc:postgresql://localhost:5432/projetBBB";
 		user = "postgres";
-		System.out.println("entrez votre mot de pass postgres ");
+		System.out.print("Entrez votre mot de passe postgres : ");
 		passwd = sc.nextLine();
+
 
 
 		try {

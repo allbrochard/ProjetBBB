@@ -91,7 +91,6 @@ public class Graphique extends JFrame{
 		
 		return null;
 	}
-	
 
 	class Connecte implements ActionListener{
 

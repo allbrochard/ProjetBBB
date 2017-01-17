@@ -8,6 +8,7 @@ public abstract class Compte {
 
 	public Compte(){
 
+
 	}
 
 	public void checkPlanGen(){
